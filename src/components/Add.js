@@ -13,7 +13,7 @@ export const Add = () => {
 
         setQuery(e.target.value);
 
-        await Axios.get(`http://www.omdbapi.com/?apikey=32395055&type=movie&s=${e.target.value}`)
+        await Axios.get(`https://www.omdbapi.com/?apikey=32395055&type=movie&s=${e.target.value}`)
             .then((res) => {
                 if (res.data.Response === "True") {
                     setResults(res.data.Search);
@@ -38,16 +38,6 @@ export const Add = () => {
                             onChange={onChange}
                         />
                     </div>
-
-                    {/* {results.length > 0 && (
-                    <ul className="results">
-                    {results.map((movie) => (
-                    <li key={movie.id}>
-                  <ResultCard movie={movie} />
-                </li>
-              ))}
-            </ul>
-          )} */}
 
                     <ul className="results">
                         {results ? results.map((movie) => (

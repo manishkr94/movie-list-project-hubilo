@@ -25,7 +25,7 @@ export const ResultCard = ({ movie }) => {
       <div className="poster-wrapper">
         {movie.Poster ? (
           <img
-            src={movie.Poster}
+            src={movie.Poster !=="N/A"? movie.Poster :"https://images.wallpapersden.com/image/download/ms-dhoni-untold-story-hd-wallpaper_39349_1280x720.jpg"}
             alt={movie.Title} 
           />
         ) : (

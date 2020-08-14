@@ -7,8 +7,8 @@ export default makeStyles({
     justifyContent: 'space-between',
     alignItems: 'center',
     width: '100%',
-    height: '45vh',
-    padding: '5%',
+    height: '60vh',
+    padding: '10%',
     borderRadius: 10,
     color: 'white',
   },
@@ -16,6 +16,9 @@ export default makeStyles({
     display: 'flex', flexDirection: 'column', textAlign: 'center',
   },
   container: {
-    padding: '0 5%', width: '100%', margin: 0,
+    padding: '2% 5%', width: '100%', margin: 0,
   },
+  dropdown : {
+    padding : '1% 5%' ,background : '#bbedec' ,  width : '100%' , margin : 0
+  }
 });

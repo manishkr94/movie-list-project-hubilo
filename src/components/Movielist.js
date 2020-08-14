@@ -20,10 +20,10 @@ export const Movielist = () => {
 
     const fetchMovie = async (year) => {
         if (!year) {
-            const res = await Axios.get("http://www.omdbapi.com/?apikey=32395055&type=movie&s=bad")
+            const res = await Axios.get("https://www.omdbapi.com/?apikey=32395055&type=movie&s=bad")
         }  
 
-        const res = await Axios.get(`http://www.omdbapi.com/?apikey=32395055&type=movie&s=bad&y=${year}`)
+        const res = await Axios.get(`https://www.omdbapi.com/?apikey=32395055&type=movie&s=bad&y=${year}`)
         
         if (res.data.Response) {
             setMovies(res.data.Search)
@@ -40,16 +40,16 @@ export const Movielist = () => {
 
     return (
         <div>
-            <FormControl >
+            <FormControl className ={classes.dropdown} >
                 <NativeSelect defaultValue="" onChange={(e) => handleYearChange(e.target.value)}>
-                    <option key = "1" value={false}>Year</option>
-                    {years.map((year, i) => <option key={i} value={year}>{year}</option>)}
+                    <option className = {classes.dropdow} key = "1" value={false}>Select a Year to filter movies</option>
+                    {years.map((year, i) => <option className={classes.dropdown} key={i} value={year}>{year}</option>)}
                 </NativeSelect>
             </FormControl>
             <Grow in>
                 <Grid className={classes.container} container alignItems="stretch" spacing={4}>
                     {movies.map((movie, i) => (
-                        <Grid item xs={12} sm={6} md={4} lg={3} style={{ display: 'flex' }}>
+                        <Grid item xs={12} md={6}  style={{ display: 'flex' }}>
                             <ResultCard movie={movie} />
                         </Grid>
                     ))}
