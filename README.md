@@ -1,3 +1,4 @@
+This project is created basically to learn and understand the use of context api for maintaining the global state of application. 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
