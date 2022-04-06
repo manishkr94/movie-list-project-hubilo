@@ -105,7 +105,15 @@ header .nav-links {
   margin: 0;
   list-style: none;
   display: flex;
-  align-items: center;
+  align-items: center;  
+}
+header .watched-number{
+  border: #1aa762 solid 2px;
+  border-radius:15%;
+  padding: 5px;
+  margin-left: 5px;
+  font-size: 1.5rem;
+  background-color: red;
 }
 
 header .nav-links li {
@@ -151,8 +159,8 @@ header .nav-links li:last-child {
 
 .result-card .poster-wrapper img,
 .filler-poster {
-  width: 75px;
-  height: 113px;
+  width: 150px;
+  height: 180px;
   background-color: #dbdada;
   border-radius: 5px;
   margin-right: 15px;
